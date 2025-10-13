@@ -6,14 +6,20 @@ export async function POST(req) {
 
     if (!docId || !referenceId) throw new Error("Missing docId or referenceId");
 
-    const now = new Date();
-    const formattedDateTime = `${String(now.getDate()).padStart(2,'0')}/${
-      String(now.getMonth() + 1).padStart(2,'0')
-    }/${now.getFullYear()} ${
-      String(now.getHours()).padStart(2,'0')
-    }:${String(now.getMinutes()).padStart(2,'0')}:${
-      String(now.getSeconds()).padStart(2,'0')
-    }`;
+   const now = new Date();
+const istDate = new Date(
+  now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
+);
+
+const formattedDateTime = `${String(istDate.getDate()).padStart(2, '0')}/${
+  String(istDate.getMonth() + 1).padStart(2, '0')
+}/${istDate.getFullYear()} ${
+  String(istDate.getHours()).padStart(2, '0')
+}:${String(istDate.getMinutes()).padStart(2, '0')}:${
+  String(istDate.getSeconds()).padStart(2, '0')
+}`;
+
+console.log(formattedDateTime);
 
     await adminDb.collection("distributors").doc(docId).update({
       referenceId,
