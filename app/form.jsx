@@ -9,7 +9,15 @@ import {
   Building,
   CreditCard,
   CheckCircle,
-  AlertCircle, Home, Truck, Briefcase, DollarSign , FileText, Layers, PackageCheck, Box, 
+  AlertCircle,
+  Home,
+  Truck,
+  Briefcase,
+  DollarSign,
+  FileText,
+  Layers,
+  PackageCheck,
+  Box,
 } from "lucide-react";
 import { storage } from "../lib/firebase";
 import {
@@ -367,7 +375,7 @@ export default function App() {
             referenceId: "",
             docId: "",
           });
-          // 
+          //
           setSelectedImages([]);
           setImagePreviews([]);
 
@@ -517,34 +525,33 @@ export default function App() {
     <div className="min-h-screen bg-[#fff] py-12 px-4">
       <div className="">
         {/* Header with Logo - Fixed */}
-        <div className="fixed top-0 left-0 w-full bg-white shadow-lg z-50 flex items-center justify-between px-8 py-4">
+        <div className="fixed top-0 left-0 w-full bg-white shadow-lg z-50 flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-4">
           {/* Logo on the left */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-center md:justify-start w-full md:w-auto mb-2 md:mb-0">
             <img
               src="/logo.png"
               alt="Company Logo"
-              className="w-65 h-auto object-contain"
+              className="w-40 sm:w-52 md:w-65 h-auto object-contain"
             />
           </div>
 
           {/* Phone number on the right */}
-          <div className="flex items-center gap-2">
-            <Phone className="w-5 h-5 text-[#FE681C]" />
-            <h1 className="text-[#282252] font-bold">+91 98275 19707</h1>
+          <div className="flex items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg">
+            <Phone className="w-4 sm:w-5 h-4 sm:h-5 text-[#FE681C]" />
+            <h1 className="text-[#282252] font-bold text-sm sm:text-base md:text-lg">
+              +91 98275 19707
+            </h1>
           </div>
         </div>
 
         {/* LEFT SIDE - Graphics / Company Info */}
-        <div className="min-h-screen bg-gray-50 flex justify-center items-start p-15">
+        <div className="min-h-screen bg-gray-50 flex justify-center items-start py-10">
           <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="hidden md:flex md:col-span-5 flex-col justify-between w-full rounded-2xl shadow-2xl text-black relative overflow-hidden">
-            
-              
-               {/* SECTION 1 - Header with Orange Background */}
+              {/* SECTION 1 - Header with Orange Background */}
               <div className="relative h-1/4 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 overflow-hidden flex flex-col justify-between">
-
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-orange-200/30 rounded-full -mr-16 -mb-16"></div>
-                    {/* Clouds */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-200/30 rounded-full -mr-16 -mt-16"></div>
+                {/* Clouds */}
                 <div className="absolute top-23 left-12 w-32 h-20 opacity-40">
                   <div className="absolute bg-[#FE681C] rounded-full w-16 h-16 top-2 left-0"></div>
                   <div className="absolute bg-[#FE681C] rounded-full w-20 h-20 top-0 left-8"></div>
@@ -587,8 +594,8 @@ export default function App() {
                       </svg>
                     </div>
                     <div>
-                     <h1 className="text-[#FE681C] font-bold text-xl tracking-tight">
-                       India’s Largest Distributor Network
+                      <h1 className="text-[#FE681C] font-bold text-xl tracking-tight">
+                        India’s Largest Distributor Network
                       </h1>
                       <div className="flex items-center gap-2 mt-0.5">
                         <div className="h-1 w-1 rounded-full bg-white/80"></div>
@@ -609,9 +616,11 @@ export default function App() {
                 </div>
               </div>
 
-                {/* SECTION 3 - Why Choose Us */}
-              <div className="h-1/4 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 flex items-center relative overflow-hidden">
+              {/* SECTION 3 - Why Choose Us */}
+              <div className="h-1/4 bg-gradient-to-b from-yellow-50 via-teal-50 to-cyan-50 flex items-center relative overflow-hidden">
                 {/* Decorative elements */}
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-amber-200/30 rounded-full -ml-12 -mb-12"></div>
+
                 <div className="absolute top-0 left-0 w-40 h-40 bg-emerald-200/20 rounded-full -ml-20 -mt-20"></div>
                 <div className="absolute bottom-0 right-0 w-32 h-32 bg-teal-200/20 rounded-full -mr-16 -mb-16"></div>
                 <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-emerald-400/40 rounded-full"></div>
@@ -630,7 +639,7 @@ export default function App() {
                   </div>
 
                   <div className="space-y-2.5">
-                     <div className="flex items-start gap-3 bg-white/60 rounded-lg p-2.5 border border-emerald-200/60">
+                    <div className="flex items-start gap-3 bg-white/60 rounded-lg p-2.5 border border-emerald-200/60">
                       <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                       <p className="text-sm text-gray-700 font-medium">
                         Priority connect with big brands.
@@ -659,7 +668,7 @@ export default function App() {
               </div>
 
               {/* SECTION 2 - Welcome Message */}
-              <div className="h-1/4 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 flex items-center relative overflow-hidden">
+              <div className="h-1/4 bg-gradient-to-b from-cyan-50 via-amber-50 to-yellow-50 flex items-center relative overflow-hidden">
                 {/* Decorative circles */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-orange-200/30 rounded-full -mr-16 -mt-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-amber-200/30 rounded-full -ml-12 -mb-12"></div>
@@ -703,7 +712,7 @@ export default function App() {
               </div>
 
               {/* SECTION 4 - Stats & CTA */}
-              <div className="h-1/4 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center relative overflow-hidden">
+              <div className="h-1/4 bg-gradient-to-b from-yellow-50 via-indigo-50 to-purple-50 flex items-center relative overflow-hidden">
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-36 h-36 bg-blue-200/20 rounded-full -mr-18 -mt-18"></div>
                 <div className="absolute bottom-0 left-0 w-28 h-28 bg-indigo-200/20 rounded-full -ml-14 -mb-14"></div>
@@ -764,7 +773,7 @@ export default function App() {
             </div>
 
             {/* RIGHT SIDE - Form */}
-            <div className="md:col-span-7 bg-[#fff] border border-gray-400 rounded-2xl shadow-xl ">
+            <div className="md:col-span-7 w-full max-w-full mx-auto bg-white border border-gray-300 rounded-2xl shadow-xl overflow-hidden ">
               {successMessage && (
                 <div className="mb-6 p-4 bg-green-100 border border-green-300 text-green-800 rounded-xl text-center font-medium">
                   {successMessage}
@@ -774,7 +783,7 @@ export default function App() {
               <div className="bg-[#f8f8f8] rounded-2xl p-8">
                 {notificationMessage && (
                   <div
-                    className={`mb-6 p-4 rounded-xl text-center font-medium ${
+                    className={`mb-4 sm:mb-6 p-3 sm:p-4 rounded-xl text-center font-medium text-sm sm:text-base transition-all ${
                       notificationType === "success"
                         ? "bg-green-100 border border-green-300 text-green-800"
                         : "bg-red-100 border border-red-300 text-red-800"
@@ -784,7 +793,7 @@ export default function App() {
                   </div>
                 )}
 
-                <h2 className="text-3xl text-[#FE681C]  font-bold mb-6 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#FE681C] font-bold mb-6 text-center">
                   Distributor Registration Form
                 </h2>
 
@@ -847,20 +856,21 @@ export default function App() {
                   </div>
 
                   {/* Email with Verification */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    {/* Email Input + Verification */}
+                    <div className="w-full">
+                      <label className="block text-sm sm:text-base font-semibold text-gray-900 mb-2">
                         Email Address <span className="text-red-600">*</span>
                       </label>
-                      <div className="flex gap-3">
+                      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                         <div className="relative flex-1">
-                          <Mail className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                          <Mail className="absolute left-3 top-2 sm:top-2.5 w-4 sm:w-5 h-4 sm:h-5 text-[#FE681C]" />
                           <input
                             type="email"
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
-                            className={`w-full pl-10 pr-2 py-1 border text-black rounded-xl  focus:border-transparent transition-all ${
+                            className={`w-full pl-10 pr-2 py-1 sm:py-1.5 border text-black rounded-xl transition-all ${
                               errors.email
                                 ? "border-red-500"
                                 : "border-gray-300"
@@ -869,6 +879,7 @@ export default function App() {
                             disabled={verificationSent || isVerified}
                           />
                         </div>
+
                         {!isVerified ? (
                           <button
                             type="button"
@@ -876,7 +887,7 @@ export default function App() {
                             disabled={
                               !formData.email || otpLoading || verificationSent
                             }
-                            className="bg-[#FE681C] text-white px-3 py-1 cursor-pointer rounded-xl font-semibold hover:bg-[#e67035] disabled:bg-[#FE681C] disabled:cursor-not-allowed transition-all"
+                            className="bg-[#FE681C] text-white px-3 py-1 sm:py-1 rounded-xl font-semibold hover:bg-[#e67035] disabled:bg-[#FE681C] disabled:cursor-not-allowed cursor-pointer transition-all w-full sm:w-auto"
                           >
                             {otpLoading
                               ? "Sending..."
@@ -885,7 +896,7 @@ export default function App() {
                               : "Verify Email"}
                           </button>
                         ) : (
-                          <div className="flex items-center px-2 py-1 bg-green-100 rounded-xl">
+                          <div className="flex items-center px-2 py-2 bg-green-100 rounded-xl w-full sm:w-auto">
                             <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                             <span className="text-green-700 font-medium">
                               Verified
@@ -893,41 +904,41 @@ export default function App() {
                           </div>
                         )}
                       </div>
+
                       {errors.email && (
-                        <p className="text-red-500 text-sm mt-1 flex items-center">
-                          <AlertCircle className="w-4 h-4 mr-1" />{" "}
+                        <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center">
+                          <AlertCircle className="w-3 sm:w-4 h-3 sm:h-4 mr-1" />{" "}
                           {errors.email}
                         </p>
                       )}
 
                       {verificationSent && !isVerified && (
-                        <div className="mt-3">
-                          <div className="flex gap-3">
+                        <div className="mt-3 space-y-2">
+                          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                             <input
                               type="text"
                               name="otp"
                               value={formData.otp || ""}
                               onChange={handleInputChange}
                               placeholder="Enter OTP"
-                              className=" px-2 py-1 border rounded-xl text-black"
+                              className="w-full sm:flex-1 px-2 py-1 border rounded-xl text-black"
                             />
-
                             <button
                               type="button"
                               onClick={handleVerifyEmail}
-                              className="bg-[#FF8C2F] text-white px-2 py-1 rounded-xl mt-2 cursor-pointer"
+                              className="bg-[#FF8C2F] text-white px-2 py-2 rounded-xl font-medium w-full sm:w-auto"
                             >
                               Verify
                             </button>
                           </div>
 
-                          {/* 🔹 Resend Button OTP input ke neeche */}
-                          <div className="mt-2">
+                          {/* Resend OTP */}
+                          <div>
                             <button
                               type="button"
                               onClick={handleResendOTP}
                               disabled={resendTimer > 0}
-                              className="text-blue-600 font-medium hover:underline disabled:text-gray-400 cursor-pointer"
+                              className="text-blue-600 font-medium hover:underline disabled:text-gray-400 cursor-pointer text-sm sm:text-base"
                             >
                               {resendTimer > 0
                                 ? `Resend OTP in ${resendTimer}s`
@@ -937,26 +948,28 @@ export default function App() {
                         </div>
                       )}
                     </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
+
+                    {/* Phone Input */}
+                    <div className="w-full">
+                      <label className="block text-sm sm:text-base font-semibold text-gray-900 mb-2">
                         Phone Number <span className="text-red-600">*</span>
                       </label>
                       <div className="relative">
-                        <Phone className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <Phone className="absolute left-3 top-2 sm:top-2.5 w-4 sm:w-5 h-4 sm:h-5 text-[#FE681C]" />
                         <input
                           type="tel"
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className={`w-full pl-10 pr-2 py-1 border text-black rounded-xl  focus:border-transparent transition-all ${
+                          className={`w-full pl-10 pr-1 py-2 sm:py-1.5 border text-black rounded-xl transition-all ${
                             errors.phone ? "border-red-500" : "border-gray-300"
                           }`}
                           placeholder="Enter your phone number"
                         />
                       </div>
                       {errors.phone && (
-                        <p className="text-red-500 text-sm mt-1 flex items-center">
-                          <AlertCircle className="w-4 h-4 mr-1" />{" "}
+                        <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center">
+                          <AlertCircle className="w-3 sm:w-4 h-3 sm:h-4 mr-1" />{" "}
                           {errors.phone}
                         </p>
                       )}
@@ -969,18 +982,18 @@ export default function App() {
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         City <span className="text-red-600">*</span>
                       </label>
-                        <div className="relative">
-                       <Home className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="text"
-                        name="city"
-                        value={formData.city}
-                        onChange={handleInputChange}
-                        className={`w-full pl-10 pr-2 py-1 border text-black rounded-xl  focus:border-transparent transition-all ${
-                          errors.city ? "border-red-500" : "border-gray-300"
-                        }`}
-                        placeholder="Enter your city"
-                      />
+                      <div className="relative">
+                        <Home className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="text"
+                          name="city"
+                          value={formData.city}
+                          onChange={handleInputChange}
+                          className={`w-full pl-10 pr-2 py-1 border text-black rounded-xl  focus:border-transparent transition-all ${
+                            errors.city ? "border-red-500" : "border-gray-300"
+                          }`}
+                          placeholder="Enter your city"
+                        />
                       </div>
                       {errors.city && (
                         <p className="text-red-500 text-sm mt-1 flex items-center">
@@ -1024,19 +1037,19 @@ export default function App() {
                         PAN Number
                       </label>
                       <div className="relative">
-                       <CreditCard className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="text"
-                        name="panNumber"
-                        value={formData.panNumber}
-                        onChange={handleInputChange}
-                        className={`w-full pl-10 pr-2 py-1 border text-black rounded-xl  focus:border-transparent transition-all ${
-                          errors.panNumber
-                            ? "border-red-500"
-                            : "border-gray-300"
-                        }`}
-                        placeholder="Enter your PAN number"
-                      />
+                        <CreditCard className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="text"
+                          name="panNumber"
+                          value={formData.panNumber}
+                          onChange={handleInputChange}
+                          className={`w-full pl-10 pr-2 py-1 border text-black rounded-xl  focus:border-transparent transition-all ${
+                            errors.panNumber
+                              ? "border-red-500"
+                              : "border-gray-300"
+                          }`}
+                          placeholder="Enter your PAN number"
+                        />
                       </div>
                       {errors.panNumber && (
                         <p className="text-red-500 text-sm mt-1 flex items-center">
@@ -1051,20 +1064,20 @@ export default function App() {
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         Aadhar Number
                       </label>
-                        <div className="relative">
-                       <FileText className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="text"
-                        name="aadharNumber"
-                        value={formData.aadharNumber}
-                        onChange={handleInputChange}
-                        className={`w-full pl-10 pr-2 py-1 border text-black rounded-xl  focus:border-transparent transition-all ${
-                          errors.aadharNumber
-                            ? "border-red-500"
-                            : "border-gray-300"
-                        }`}
-                        placeholder="Enter your Aadhar number"
-                      />
+                      <div className="relative">
+                        <FileText className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="text"
+                          name="aadharNumber"
+                          value={formData.aadharNumber}
+                          onChange={handleInputChange}
+                          className={`w-full pl-10 pr-2 py-1 border text-black rounded-xl  focus:border-transparent transition-all ${
+                            errors.aadharNumber
+                              ? "border-red-500"
+                              : "border-gray-300"
+                          }`}
+                          placeholder="Enter your Aadhar number"
+                        />
                       </div>
                       {errors.aadharNumber && (
                         <p className="text-red-500 text-sm mt-1 flex items-center">
@@ -1081,16 +1094,16 @@ export default function App() {
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         GST Number
                       </label>
-                        <div className="relative">
-                       <Briefcase className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="text"
-                        name="gstNumber"
-                        value={formData.gstNumber}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300 focus:border-transparent"
-                        placeholder="Enter your GST number"
-                      />
+                      <div className="relative">
+                        <Briefcase className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="text"
+                          name="gstNumber"
+                          value={formData.gstNumber}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300 focus:border-transparent"
+                          placeholder="Enter your GST number"
+                        />
                       </div>
                     </div>
 
@@ -1099,24 +1112,24 @@ export default function App() {
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         Current Business <span className="text-red-600">*</span>
                       </label>
-                        <div className="relative">
-                      <Layers className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <select
-                        name="businessType"
-                        value={formData.businessType}
-                        onChange={handleInputChange}
-                        className={`w-full pl-10 pr-2 py-2 border text-black rounded-xl  focus:border-transparent ${
-                          errors.businessType
-                            ? "border-red-500"
-                            : "border-gray-300"
-                        }`}
-                      >
-                        <option value="">Select</option>
-                        <option value="Distributor">Distributor</option>
-                        <option value="Dealer">Dealer</option>
-                        <option value="Wholesaler">Wholesaler</option>
-                        <option value="Fresher">Fresher</option>
-                      </select>
+                      <div className="relative">
+                        <Layers className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <select
+                          name="businessType"
+                          value={formData.businessType}
+                          onChange={handleInputChange}
+                          className={`w-full pl-10 pr-2 py-2 border text-black rounded-xl  focus:border-transparent ${
+                            errors.businessType
+                              ? "border-red-500"
+                              : "border-gray-300"
+                          }`}
+                        >
+                          <option value="">Select</option>
+                          <option value="Distributor">Distributor</option>
+                          <option value="Dealer">Dealer</option>
+                          <option value="Wholesaler">Wholesaler</option>
+                          <option value="Fresher">Fresher</option>
+                        </select>
                       </div>
                       {errors.businessType && (
                         <p className="text-red-500 text-sm mt-1 flex items-center">
@@ -1133,34 +1146,34 @@ export default function App() {
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         Shop & Establishment License (If Applicable)
                       </label>
-                       <div className="relative">
+                      <div className="relative">
                         <Truck className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="text"
-                        name="shopLicense"
-                        value={formData.shopLicense}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                        placeholder="Enter License number"
-                      />
-                        </div>
+                        <input
+                          type="text"
+                          name="shopLicense"
+                          value={formData.shopLicense}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
+                          placeholder="Enter License number"
+                        />
+                      </div>
                     </div>
 
                     <div>
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         FSSAI License (If Applicable)
                       </label>
-                        <div className="relative">
-                       <PackageCheck className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="text"
-                        name="fssaiLicense"
-                        value={formData.fssaiLicense}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                        placeholder="Enter FSSAI number"
-                      />
-                        </div>
+                      <div className="relative">
+                        <PackageCheck className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="text"
+                          name="fssaiLicense"
+                          value={formData.fssaiLicense}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
+                          placeholder="Enter FSSAI number"
+                        />
+                      </div>
                     </div>
                   </div>
 
@@ -1170,33 +1183,33 @@ export default function App() {
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         Current Product Categories Handled
                       </label>
-                       <div className="relative">
-                       <Layers className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="text"
-                        name="productCategories"
-                        value={formData.productCategories}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                        placeholder="Enter categories"
-                      />
-                        </div>
+                      <div className="relative">
+                        <Layers className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="text"
+                          name="productCategories"
+                          value={formData.productCategories}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
+                          placeholder="Enter categories"
+                        />
+                      </div>
                     </div>
 
                     <div>
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         Experience in Distribution (Years)
                       </label>
-                        <div className="relative">
-                       <FileText className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="number"
-                        name="experienceYears"
-                        value={formData.experienceYears}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                        placeholder="Enter number of years"
-                      />
+                      <div className="relative">
+                        <FileText className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="number"
+                          name="experienceYears"
+                          value={formData.experienceYears}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
+                          placeholder="Enter number of years"
+                        />
                       </div>
                     </div>
                   </div>
@@ -1209,16 +1222,16 @@ export default function App() {
                         Existing Brands Associated With (Upto 5)
                       </label>
                       <div className="flex gap-2">
-                         {/* Input with icon */}
+                        {/* Input with icon */}
                         <div className="relative flex-1 min-w-[150px] max-w-[250px]">
                           <PackageCheck className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                        <input
-                          type="text"
-                          value={newBrand}
-                          onChange={(e) => setNewBrand(e.target.value)}
-                          className="w-full flex-1 pl-10 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                          placeholder="Enter brand name"
-                        />
+                          <input
+                            type="text"
+                            value={newBrand}
+                            onChange={(e) => setNewBrand(e.target.value)}
+                            className="w-full pl-10 px-2 py-2 sm:py-1.5 border text-black rounded-xl border-gray-300 focus:border-transparent transition-all"
+                            placeholder="Enter brand name"
+                          />
                         </div>
                         <button
                           type="button"
@@ -1227,7 +1240,7 @@ export default function App() {
                             !newBrand.trim() ||
                             formData.brandsAssociated.length >= 5
                           }
-                          className="px-3 py-1 bg-blue-600 text-white rounded-xl hover:bg-blue-700 disabled:bg-[#FE681C]"
+                          className="w-15 sm:w-auto px-3 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 disabled:bg-[#FE681C] transition-all"
                         >
                           +
                         </button>
@@ -1238,13 +1251,16 @@ export default function App() {
                         {formData.brandsAssociated.map((brand, index) => (
                           <span
                             key={index}
-                            className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full flex items-center gap-2"
+                            className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-blue-100 text-blue-800 rounded-full text-xs sm:text-sm md:text-base break-words"
                           >
-                            {brand}
+                            <span className="truncate max-w-[100px] sm:max-w-[150px]">
+                              {brand}
+                            </span>
                             <button
                               type="button"
                               onClick={() => handleRemoveBrand(index)}
-                              className="text-red-500 hover:text-red-700"
+                              className="text-red-500 hover:text-red-700 focus:outline-none focus:ring-1 focus:ring-red-300 rounded-full px-1 sm:px-2"
+                              aria-label={`Remove ${brand}`}
                             >
                               ×
                             </button>
@@ -1252,21 +1268,22 @@ export default function App() {
                         ))}
                       </div>
                     </div>
+
                     <div>
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         Warehouse / Godown Size & Location
                       </label>
-                        <div className="relative">
-                       <Box className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="text"
-                        name="warehouseDetails"
-                        value={formData.warehouseDetails}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                        placeholder="Enter details"
-                      />
-                       </div>
+                      <div className="relative">
+                        <Box className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="text"
+                          name="warehouseDetails"
+                          value={formData.warehouseDetails}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
+                          placeholder="Enter details"
+                        />
+                      </div>
                     </div>
                   </div>
 
@@ -1276,53 +1293,56 @@ export default function App() {
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         Area / Territory Interested
                       </label>
-                        <div className="relative">
-                       <MapPin className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="text"
-                        name="territoryInterested"
-                        value={formData.territoryInterested}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                        placeholder="Enter area or territory"
-                      />
-                        </div>
+                      <div className="relative">
+                        <MapPin className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="text"
+                          name="territoryInterested"
+                          value={formData.territoryInterested}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
+                          placeholder="Enter area or territory"
+                        />
+                      </div>
                     </div>
 
                     <div>
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         No. of Retailers / Wholesellers Covered
                       </label>
-                        <div className="relative">
-                      <Truck className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                      <input
-                        type="number"
-                        name="retailersCovered"
-                        value={formData.retailersCovered}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                        placeholder="Enter numbers"
-                      />
-                       </div>
+                      <div className="relative">
+                        <Truck className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
+                        <input
+                          type="number"
+                          name="retailersCovered"
+                          value={formData.retailersCovered}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
+                          placeholder="Enter numbers"
+                        />
+                      </div>
                     </div>
                   </div>
 
                   {/* Interested Category */}
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    {/* Interested Categories */}
+                    <div className="w-full">
+                      <label className="block text-sm sm:text-base font-semibold text-gray-900 mb-2">
                         Interested In Product / Category (Upto 5)
                       </label>
-                      <div className="flex gap-2 relative">
-                         <Package className="absolute left-3 top-2 w-5 h-5 text-[#FE681C]" />
-                        <input
-                          type="text"
-                          value={newCategory}
-                          onChange={(e) => setNewCategory(e.target.value)}
-                          className="w-full pl-10 flex-1 px-2 py-1 border text-black rounded-xl border-gray-300 focus:border-transparent"
-                          placeholder="Enter product"
-                        />
+                      <div className="flex  gap-2 ">
+                        <div className="relative flex-1 min-w-[150px] max-w-[250px]">
+                          <Package className="absolute left-3 top-2 sm:top-2.5 w-4 sm:w-5 h-4 sm:h-5 text-[#FE681C]" />
+                          <input
+                            type="text"
+                            value={newCategory}
+                            onChange={(e) => setNewCategory(e.target.value)}
+                            className="w-full pl-10 px-2 py-2 sm:py-1.5 border text-black rounded-xl border-gray-300 focus:border-transparent transition-all"
+                            placeholder="Enter product"
+                          />
+                        </div>
                         <button
                           type="button"
                           onClick={handleAddCategory}
@@ -1330,24 +1350,26 @@ export default function App() {
                             !newCategory.trim() ||
                             formData.interestedCategories.length >= 5
                           }
-                          className="px-3 py-1 bg-blue-600 text-white rounded-xl hover:bg-blue-700 disabled:bg-[#FE681C]"
+                          className="w-15 sm:w-auto px-3 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 disabled:bg-[#FE681C] transition-all"
                         >
                           +
                         </button>
                       </div>
-
                       {/* Show selected categories */}
                       <div className="flex flex-wrap gap-2 mt-3">
                         {formData.interestedCategories.map((cat, index) => (
                           <span
                             key={index}
-                            className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full flex items-center gap-2"
+                            className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-blue-100 text-blue-800 rounded-full text-xs sm:text-sm md:text-base break-words"
                           >
-                            {cat}
+                            <span className="truncate max-w-[100px] sm:max-w-[150px]">
+                              {cat}
+                            </span>
                             <button
                               type="button"
                               onClick={() => handleRemoveCategory(index)}
-                              className="text-red-500 hover:text-red-700"
+                              className="text-red-500 hover:text-red-700 focus:outline-none focus:ring-1 focus:ring-red-300 rounded-full px-1 sm:px-2"
+                              aria-label={`Remove ${cat}`}
                             >
                               ×
                             </button>
@@ -1357,11 +1379,11 @@ export default function App() {
                     </div>
 
                     {/* Delivery Vehicles */}
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <div className="w-full mt-4 md:mt-0">
+                      <label className="block text-sm sm:text-base font-semibold text-gray-900 mb-2">
                         Delivery Vehicles
                       </label>
-                      <div className="flex gap-4 items-center">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                         <label className="flex items-center text-gray-900 gap-2">
                           <input
                             type="radio"
@@ -1369,7 +1391,7 @@ export default function App() {
                             value="No"
                             checked={formData.deliveryVehicles === "No"}
                             onChange={handleInputChange}
-                          />{" "}
+                          />
                           No
                         </label>
                         <label className="flex items-center text-gray-900 gap-2">
@@ -1379,9 +1401,10 @@ export default function App() {
                             value="Yes"
                             checked={formData.deliveryVehicles === "Yes"}
                             onChange={handleInputChange}
-                          />{" "}
+                          />
                           Yes
                         </label>
+
                         {formData.deliveryVehicles === "Yes" && (
                           <input
                             type="number"
@@ -1389,7 +1412,7 @@ export default function App() {
                             value={formData.vehicleCount || ""}
                             onChange={handleInputChange}
                             placeholder="How many?"
-                            className="ml-3 w-24 px-2 py-1 border text-black rounded-lg border-gray-300"
+                            className="w-full sm:w-24 px-2 py-1 border text-black rounded-lg border-gray-300"
                           />
                         )}
                       </div>
@@ -1402,29 +1425,33 @@ export default function App() {
                       <label className="block text-sm font-semibold text-gray-900 mb-2">
                         Investment Capacity (₹)
                       </label>
-                        <div className="relative">
-                       <span className="absolute left-3 top-2 text-[#FE681C] text-lg font-semibold">₹</span>
-                      <select
-                        id="investmentCapacity"
-                        name="investmentCapacity"
-                        value={formData.investmentCapacity}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-2 py-2 text-gray-900 border border-gray-300 rounded-xl focus:outline-none focus:ring"
-                      >
-                        <option value="">Select Your Investment Capacity</option>
-                        <option value="Just Started">Just Started</option>
-                        <option value="Below 1 L">Below 1 L</option>
-                        <option value="1-5 L">1-5 L</option>
-                        <option value="5-10 L">5-10 L</option>
-                        <option value="10-20 L">10-20 L</option>
-                        <option value="20-40 L">20-40 L</option>
-                        <option value="40-70 L">40-70 L</option>
-                        <option value="70 L-1 Cr">70 L-1 Cr</option>
-                        <option value="1-2 Cr">1-2 Cr</option>
-                        <option value="2-5 Cr">2-5 Cr</option>
-                        <option value="5 Cr+">5 Cr+</option>
-                      </select>
-                        </div>
+                      <div className="relative">
+                        <span className="absolute left-3 top-2 text-[#FE681C] text-lg font-semibold">
+                          ₹
+                        </span>
+                        <select
+                          id="investmentCapacity"
+                          name="investmentCapacity"
+                          value={formData.investmentCapacity}
+                          onChange={handleInputChange}
+                          className="w-full pl-10 pr-2 py-2 text-gray-900 border border-gray-300 rounded-xl focus:outline-none focus:ring"
+                        >
+                          <option value="">
+                            Select Your Investment Capacity
+                          </option>
+                          <option value="Just Started">Just Started</option>
+                          <option value="Below 1 L">Below 1 L</option>
+                          <option value="1-5 L">1-5 L</option>
+                          <option value="5-10 L">5-10 L</option>
+                          <option value="10-20 L">10-20 L</option>
+                          <option value="20-40 L">20-40 L</option>
+                          <option value="40-70 L">40-70 L</option>
+                          <option value="70 L-1 Cr">70 L-1 Cr</option>
+                          <option value="1-2 Cr">1-2 Cr</option>
+                          <option value="2-5 Cr">2-5 Cr</option>
+                          <option value="5 Cr+">5 Cr+</option>
+                        </select>
+                      </div>
                     </div>
 
                     <div className="mb-6">
@@ -1483,7 +1510,7 @@ export default function App() {
                   <button
                     onClick={handleSubmit}
                     disabled={isSubmitting}
-                    className="w-full bg-[#FE681C]  text-white cursor-pointer py-4 px-6 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-indigo-800 disabled:bg-[#FE681C] disabled:cursor-not-allowed transition-all duration-200 shadow-lg"
+                    className="w-full  bg-[#FE681C] text-white cursor-pointer py-3 sm:py-4 px-4 sm:px-6 rounded-xl font-bold text-base sm:text-lg hover:bg-[#e67035] disabled:bg-[#FE681C] disabled:cursor-not-allowed transition-all duration-200 shadow-lg text-center"
                   >
                     {isSubmitting ? "Processing..." : "Submit Application"}
                   </button>
@@ -1491,7 +1518,7 @@ export default function App() {
                   {/* 🔹 Notification near Submit button */}
                   {notificationMessage && (
                     <div
-                      className={`mt-3 p-3 rounded-xl text-center font-medium transition-all duration-200 ${
+                      className={`mb-4 sm:mb-6 p-3 sm:p-4 rounded-xl text-center font-medium text-sm sm:text-base transition-all ${
                         notificationType === "success"
                           ? "bg-green-100 border border-green-300 text-green-800"
                           : "bg-red-100 border border-red-300 text-red-800"
