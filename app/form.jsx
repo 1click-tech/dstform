@@ -174,7 +174,7 @@ export default function App() {
       const data = await res.json();
       if (data.success) {
         setVerificationSent(true);
-        setNotificationMessage("OTP sent to your email! 🎉");
+        setNotificationMessage("OTP sent to your email!");
         setNotificationType("success");
         setTimeout(() => setNotificationMessage(""), 3000);
       } else {
@@ -367,7 +367,7 @@ export default function App() {
             referenceId: "",
             docId: "",
           });
-          // ✅ Reset images here
+          // 
           setSelectedImages([]);
           setImagePreviews([]);
 
@@ -538,41 +538,42 @@ export default function App() {
         <div className="min-h-screen bg-gray-50 flex justify-center items-start p-15">
           <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="hidden md:flex md:col-span-5 flex-col justify-between w-full rounded-2xl shadow-2xl text-black relative overflow-hidden">
-              {/* SECTION 1 - Header with Orange Background */}
-              <div className="relative h-1/4 bg-gradient-to-br from-[#FE681C] via-[#FF7A35] to-[#FF8C4D] overflow-hidden flex flex-col justify-between">
-                {/* Clouds */}
+            
+              
+               {/* SECTION 1 - Header with Orange Background */}
+              <div className="relative h-1/4 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 overflow-hidden flex flex-col justify-between">
+
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-orange-200/30 rounded-full -mr-16 -mb-16"></div>
+                    {/* Clouds */}
                 <div className="absolute top-23 left-12 w-32 h-20 opacity-40">
-                  <div className="absolute bg-[#FFD4B3] rounded-full w-16 h-16 top-2 left-0"></div>
-                  <div className="absolute bg-[#FFD4B3] rounded-full w-20 h-20 top-0 left-8"></div>
-                  <div className="absolute bg-[#FFD4B3] rounded-full w-18 h-14 top-4 left-16"></div>
+                  <div className="absolute bg-[#FE681C] rounded-full w-16 h-16 top-2 left-0"></div>
+                  <div className="absolute bg-[#FE681C] rounded-full w-20 h-20 top-0 left-8"></div>
+                  <div className="absolute bg-[#FE681C] rounded-full w-18 h-14 top-4 left-16"></div>
                 </div>
 
                 <div className="absolute top-20 right-16 w-40 h-24 opacity-40">
-                  <div className="absolute bg-[#FFD4B3] rounded-full w-20 h-20 top-2 left-0"></div>
-                  <div className="absolute bg-[#FFD4B3] rounded-full w-24 h-24 top-0 left-12"></div>
-                  <div className="absolute bg-[#FFD4B3] rounded-full w-18 h-18 top-4 left-24"></div>
+                  <div className="absolute bg-[#FE681C] rounded-full w-20 h-20 top-2 left-0"></div>
+                  <div className="absolute bg-[#FE681C] rounded-full w-24 h-24 top-0 left-12"></div>
+                  <div className="absolute bg-[#FE681C] rounded-full w-18 h-18 top-4 left-24"></div>
                 </div>
 
                 {/* Stars */}
-                <div className="absolute top-30 left-28 text-white text-2xl opacity-60">
+                <div className="absolute top-30 left-28 text-[#fb5e10] text-2xl opacity-60">
                   ✦
                 </div>
-                <div className="absolute top-32 right-32 text-white text-3xl opacity-70">
+                <div className="absolute top-32 right-32 text-[#fb5e10] text-3xl opacity-70">
                   ✦
                 </div>
-                <div className="absolute top-48 left-24 text-white text-sm opacity-50">
-                  ✦
-                </div>
-                <div className="absolute top-12 right-24 text-white text-xl opacity-50">
+                <div className="absolute top-12 right-24 text-[#fb5e10] text-xl opacity-50">
                   ✦
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 px-8 pt-6">
+                <div className="relative z-10 px-8 pt-5">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-white/20 backdrop-blur-md p-2.5 rounded-xl border border-white/40 shadow-lg">
+                    <div className="bg-gradient-to-br from-orange-500 to-amber-600 p-1.5 rounded-lg shadow-lg mt-1">
                       <svg
-                        className="w-7 h-7 text-white"
+                        className="w-6 h-6 text-white"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -586,8 +587,8 @@ export default function App() {
                       </svg>
                     </div>
                     <div>
-                     <h1 className="text-white font-bold text-xl tracking-tight">
-                        1ClickDistributors — India’s Largest Distributor Network
+                     <h1 className="text-[#FE681C] font-bold text-xl tracking-tight">
+                       India’s Largest Distributor Network
                       </h1>
                       <div className="flex items-center gap-2 mt-0.5">
                         <div className="h-1 w-1 rounded-full bg-white/80"></div>
@@ -597,13 +598,62 @@ export default function App() {
                 </div>
 
                 <div className="relative z-10 px-8 pb-6">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
-                    <h2 className="text-white font-bold text-lg mb-1">
+                  <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-orange-200">
+                    <h2 className="text-[#FE681C] font-bold text-lg mb-1">
                       Distributor Onboarding
                     </h2>
-                    <p className="text-white/90 text-sm">
+                    <p className="text-black text-sm">
                       Your gateway to nationwide distribution success
                     </p>
+                  </div>
+                </div>
+              </div>
+
+                {/* SECTION 3 - Why Choose Us */}
+              <div className="h-1/4 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 flex items-center relative overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute top-0 left-0 w-40 h-40 bg-emerald-200/20 rounded-full -ml-20 -mt-20"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-teal-200/20 rounded-full -mr-16 -mb-16"></div>
+                <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-emerald-400/40 rounded-full"></div>
+                <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-teal-400/40 rounded-full"></div>
+
+                <div className="relative z-10 px-8 py-6 w-full">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="bg-gradient-to-br from-emerald-500 to-teal-600 p-1.5 rounded-lg shadow-lg mt-1">
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-emerald-800 mb-2">
+                        Why Partner With Us?
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2.5">
+                     <div className="flex items-start gap-3 bg-white/60 rounded-lg p-2.5 border border-emerald-200/60">
+                      <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                      <p className="text-sm text-gray-700 font-medium">
+                        Priority connect with big brands.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3 bg-white/60 rounded-lg p-2.5 border border-teal-200/60">
+                      <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                      <p className="text-sm text-gray-700 font-medium">
+                        Pan-India logistics support & timely delivery
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3 bg-white/60 rounded-lg p-2.5 border border-cyan-200/60">
+                      <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
+                      <p className="text-sm text-gray-700 font-medium">
+                        Dedicated relationship manager for your business
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3 bg-white/60 rounded-lg p-2.5 border border-cyan-200/60">
+                      <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
+                      <p className="text-sm text-gray-700 font-medium">
+                        Helping in negotiations assistance onboarding
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -616,7 +666,7 @@ export default function App() {
 
                 <div className="relative z-10 px-8 py-6 w-full">
                   <div className="flex items-start gap-3 mb-4">
-                    <div className="bg-gradient-to-br from-orange-500 to-amber-600 p-2.5 rounded-lg shadow-lg mt-1">
+                    <div className="bg-gradient-to-br from-orange-500 to-amber-600 p-1.5 rounded-lg shadow-lg mt-1">
                       <svg
                         className="w-6 h-6 text-white"
                         fill="none"
@@ -652,49 +702,6 @@ export default function App() {
                 </div>
               </div>
 
-              {/* SECTION 3 - Why Choose Us */}
-              <div className="h-1/4 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 flex items-center relative overflow-hidden">
-                {/* Decorative elements */}
-                <div className="absolute top-0 left-0 w-40 h-40 bg-emerald-200/20 rounded-full -ml-20 -mt-20"></div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-teal-200/20 rounded-full -mr-16 -mb-16"></div>
-                <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-emerald-400/40 rounded-full"></div>
-                <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-teal-400/40 rounded-full"></div>
-
-                <div className="relative z-10 px-8 py-6 w-full">
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="bg-gradient-to-br from-emerald-500 to-teal-600 p-2.5 rounded-lg shadow-lg mt-1">
-                      <Award className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-emerald-800 mb-2">
-                        Why Partner With Us?
-                      </h4>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2.5">
-                    <div className="flex items-start gap-3 bg-white/60 rounded-lg p-2.5 border border-emerald-200/60">
-                      <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-gray-700 font-medium">
-                        Competitive margins and flexible payment terms
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3 bg-white/60 rounded-lg p-2.5 border border-teal-200/60">
-                      <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-gray-700 font-medium">
-                        Pan-India logistics support & timely delivery
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3 bg-white/60 rounded-lg p-2.5 border border-cyan-200/60">
-                      <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-gray-700 font-medium">
-                        Dedicated relationship manager for your business
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               {/* SECTION 4 - Stats & CTA */}
               <div className="h-1/4 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center relative overflow-hidden">
                 {/* Decorative elements */}
@@ -705,7 +712,7 @@ export default function App() {
 
                 <div className="relative z-10 px-8 py-6 w-full">
                   <div className="flex items-start gap-3 mb-4">
-                    <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-2.5 rounded-lg shadow-lg mt-1">
+                    <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-1.5 rounded-lg shadow-lg mt-1">
                       <TrendingUp className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -1134,7 +1141,7 @@ export default function App() {
                         value={formData.shopLicense}
                         onChange={handleInputChange}
                         className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                        placeholder="Enter License Number"
+                        placeholder="Enter License number"
                       />
                         </div>
                     </div>
@@ -1151,7 +1158,7 @@ export default function App() {
                         value={formData.fssaiLicense}
                         onChange={handleInputChange}
                         className="w-full pl-10 pr-2 py-1 border text-black rounded-xl border-gray-300  focus:border-transparent"
-                        placeholder="Enter FSSAI Number"
+                        placeholder="Enter FSSAI number"
                       />
                         </div>
                     </div>

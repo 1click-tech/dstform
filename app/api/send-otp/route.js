@@ -26,7 +26,7 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-  from: `"1Click Distributors" <${process.env.EMAIL_USER}>`,
+  from: `"1ClickDistributors" <${process.env.EMAIL_USER}>`,
 to: email,
 subject: "Your One-Time Password (OTP) - Distributor Verification",
 html: `
@@ -80,7 +80,7 @@ html: `
           </div>
           
           <p class="message" style="margin-top: 25px;">
-            If you're having trouble accessing the onboarding portal or have any questions, our support team is here to help. Please reach out to us at <a href="mailto:contact@1clickdistributors.com">support@1clickdistributors.com</a>.
+            If you're having trouble accessing the onboarding portal or have any questions, our support team is here to help. Please reach out to us at <a href="mailto:contact@1clickdistributors.com">connect@1clickdistributors.com</a>.
           </p>
         </div>
         

@@ -14,7 +14,7 @@ export async function POST(req) {
 
     // Increment
     const newNumber = lastNumber + 1;
-    const newId = `DP${String(newNumber).padStart(5, "0")}`; // DP00001
+    const newId = `DP${String(newNumber).padStart(5, "0")}`;
 
  const now = new Date();
 const istDate = new Date(
