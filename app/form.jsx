@@ -726,7 +726,7 @@ export default function App() {
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-blue-800 mb-1">
-                        Our Network
+                        Our Distributor Network
                       </h4>
                       <p className="text-sm text-gray-600">
                         Growing stronger every day
