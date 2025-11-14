@@ -547,12 +547,12 @@ export default function App() {
         <h1 className="text-[#282252] font-bold text-xs sm:text-base md:text-lg">
           +91 98275 19707
         </h1>
-        <div className="text-left ml-1 sm:ml-2">
+        <div className="text-center ml-1 sm:ml-2">
           <h2 className="text-[#282252] font-semibold text-[10px] sm:text-xs md:text-sm leading-tight">
             Adyasha Das
           </h2>
           <p className="text-[#666666] text-[9px] sm:text-[10px] md:text-xs leading-tight">
-            (Head of Service Department)
+            (Manager - Service )
           </p>
         </div>
       </div>
