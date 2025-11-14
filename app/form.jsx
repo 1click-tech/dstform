@@ -628,7 +628,7 @@ export default function App() {
         {[
           "/speed-well.png",
           "/grain-essence.png",
-          "/divahs.png",
+          "/Divahs.png",
           "/evercrest.png",
           "/sujlaam-spices.png",
           "/Tushit.png",
@@ -640,7 +640,7 @@ export default function App() {
           .concat([
             "/speed-well.png",
             "/grain-essence.png",
-            "/divahs.png",
+            "/Divahs.png",
             "/evercrest.png",
             "/sujlaam-spices.png",
             "/Tushit.png",
