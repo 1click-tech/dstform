@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "1clickdistributors",
-  description: "Internal tool for 1clickdistributors",
+  title: "Distributor Onboarding Form – 1Click Distributors",
+  description: "Become an authorized distributor with 1Click Distributors and connect with top brands across India.",
 };
 
 export default function RootLayout({ children }) {
