@@ -123,12 +123,22 @@ export default function App() {
   };
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
-    }
-  };
+  const { name, value } = e.target;
+
+  setFormData((prev) => ({ ...prev, [name]: value }));
+
+  // If user edits email, reset OTP process
+  if (name === "email") {
+    setIsVerified(false);
+    setVerificationSent(false);
+    setFormData((prev) => ({ ...prev, otp: "" }));
+  }
+
+  if (errors[name]) {
+    setErrors((prev) => ({ ...prev, [name]: "" }));
+  }
+};
+
   // add category functions
   const handleAddCategory = () => {
     if (newCategory.trim() && formData.interestedCategories.length < 5) {
@@ -545,7 +555,7 @@ export default function App() {
       <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-base md:text-lg">
         <Phone className="w-4 sm:w-5 h-4 sm:h-5 text-[#FE681C]" />
         <h1 className="text-[#282252] font-bold text-xs sm:text-base md:text-lg">
-          +91 98275 19707
+          +91 89206 67127
         </h1>
         <div className="text-center ml-1 sm:ml-2">
           <h2 className="text-[#282252] font-semibold text-[10px] sm:text-xs md:text-sm leading-tight">
@@ -921,7 +931,7 @@ export default function App() {
                             errors.email ? "border-red-500" : "border-gray-300"
                           }`}
                           placeholder="Enter your email"
-                          disabled={verificationSent || isVerified}
+                          disabled={false}
                         />
                       </div>
 
@@ -971,7 +981,7 @@ export default function App() {
                           <button
                             type="button"
                             onClick={handleVerifyEmail}
-                            className="bg-[#FE681C] text-white px-2 py-1 rounded-xl font-medium w-full sm:w-auto"
+                            className="bg-[#FE681C] text-white px-2 py-1 rounded-xl font-medium w-full sm:w-auto cursor-pointer" 
                           >
                             Verify
                           </button>

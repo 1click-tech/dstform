@@ -4,17 +4,23 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   try {
     const { email } = await req.json();
-    if (!email) return new Response(JSON.stringify({ error: "Email required" }), { status: 400 });
+    if (!email)
+      return new Response(JSON.stringify({ error: "Email required" }), {
+        status: 400,
+      });
 
     // Generate OTP
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
     // Save OTP in Firestore with expiry (5 min)
-    await adminDb.collection("otps").doc(email).set({
-      otp,
-      createdAt: Date.now(),
-      expiresAt: Date.now() + 5 * 60 * 1000,
-    });
+    await adminDb
+      .collection("otps")
+      .doc(email)
+      .set({
+        otp,
+        createdAt: Date.now(),
+        expiresAt: Date.now() + 5 * 60 * 1000,
+      });
 
     // Send Email
     const transporter = nodemailer.createTransport({
@@ -26,10 +32,10 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-  from: `"1ClickDistributors" <${process.env.EMAIL_USER}>`,
-to: email,
-subject: "Your One-Time Password (OTP) - Distributor Verification",
-html: `
+      from: `"1ClickDistributors" <${process.env.EMAIL_USER}>`,
+      to: email,
+      subject: "Your One-Time Password (OTP) - Distributor Verification",
+      html: `
   <!DOCTYPE html>
   <html>
     <head>
@@ -63,10 +69,12 @@ html: `
         </div>
         
         <div class="content">
-          <p class="greeting">Hello,</p>
-          
           <p class="message">
             Thank you for registering with 1Click Distributors. To complete your account verification and access the onboarding portal, please use the One-Time Password (OTP) below.
+          </p>
+          <p class="message" style="margin-top: 25px;">
+           Trouble accessing the onboarding portal/ questions. 
+           Support - Mobile: 8920667127 email: connect@1clickdistributors.com.</a>.
           </p>
           
           <div class="otp-container">
@@ -80,24 +88,32 @@ html: `
           </div>
           
           <p class="message" style="margin-top: 25px;">
-            If you're having trouble accessing the onboarding portal or have any questions, our support team is here to help. Please reach out to us at <a href="mailto:contact@1clickdistributors.com">connect@1clickdistributors.com</a>.
+           Trouble accessing the onboarding portal/ questions. 
+           Support - Mobile: 8920667127 email: connect@1clickdistributors.com.</a>.
           </p>
         </div>
         
         <div class="footer">
-          <p style="margin-top: 0;"><span class="footer-brand">1Click Distributors</span></p>
-          <p>Streamlining Distribution Excellence</p>
+         <p style="margin-top: 0;">
+           <a href="https://1clickdistributors.com" target="_blank" rel="noopener noreferrer" class="footer-brand">
+          1Click Distributors
+         </a>
+        </p>
+
+          <p>Connecting Distributors with Trusted Brands</p>
           <p style="margin-bottom: 0; color: #d1d5db;">© 2025 1Click Distributors. All rights reserved.</p>
         </div>
       </div>
     </body>
   </html>
 `,
-});
+    });
 
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
     console.error(error);
-    return new Response(JSON.stringify({ error: "Failed to send OTP" }), { status: 500 });
+    return new Response(JSON.stringify({ error: "Failed to send OTP" }), {
+      status: 500,
+    });
   }
 }
