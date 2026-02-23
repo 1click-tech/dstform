@@ -508,7 +508,7 @@ export default function App() {
               <div className="w-60 h-60 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <div className="text-white text-center">
                   <img
-                    src="/payment-qr.jpg"
+                    src="/payment-qrr.jpeg"
                     alt="Company Logo"
                     className="mx-auto object-contain"
                   />
